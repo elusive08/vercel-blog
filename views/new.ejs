@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Add Student</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<center>
+<body class="new">
+  
+  <h1 class="hn">Add new student</h1>
+  <form action="/new" method="POST" class="card">
+    <div>
+      <label for="name">Name</label><br />
+      <input id="name" name="name" required min="4" max="10"/>
+    </div>
+    <div>
+      <label for="age">Age</label><br />
+      <input id="age" name="age" type="number" min="0" />
+    </div>
+    <div>
+      <label for="course">Course</label><br />
+      <input id="course" name="course" />
+    </div>
+    <div>
+      <label for="photo">Photo URL</label><br />
+      <input id="photo" name="photo" placeholder="https://example.com/photo.jpg" />
+    </div>
+    <div style="margin-top:10px;">
+      <button type="submit" class="btn2e">Create</button>
+      <a href="/" class="btn2">Cancel</a>
+    </div>
+  </form>
+</body>
+</center>
+</html>

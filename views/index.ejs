@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Students</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  
+   <link rel="stylesheet" href="/styles.css">
+</head>
+<center>
+<body>
+  <h1 class="h2n">Students Gallery</h1>
+  <p><a href="/new" class="btn">Add new student</a></p>
+
+  <% if (students.length === 0) { %>
+    <p>No students yet.</p>
+  <% } %>
+
+  <div id="cards">
+    <% students.forEach(student => { %>
+      <div class="card" style="border:1px solid #ccc; padding:10px; margin:10px; max-width:400px;">
+        <div>
+          <% if (student.photo) { %>
+            <img src="<%= student.photo %>" alt="<%= student.name %>" style="max-width:100%; height:auto;" />
+          <% } else { %>
+            <div style="width:100%; height:150px; background:#eee; display:flex; align-items:center; justify-content:center;">
+              No photo
+            </div>
+          <% } %>
+        </div>
+        <h3><%= student.name %></h3>
+        
+        <p><strong>Age:</strong>
+        <%= student.age %></p>
+        <p><strong>Course:</strong> 
+        <%= student.course %></p>
+        <p><small>Added:
+        <%= student.createdAt ? student.createdAt.toLocaleString() : '' %></small></p>
+
+        <p>
+          <a href="/edit/<%= student._id %>" class="btn2e">Edit</a>
+          <!-- Delete form using POST -->
+          <form action="/delete/<%= student._id %>" method="POST" style="display:inline;" onsubmit="return confirmDelete();">
+            <button type="submit" class="btn2">Delete</button>
+          </form>
+        </p>
+      </div>
+    <% }) %>
+  </div>
+</center>
+  <script>
+    function confirmDelete() {
+      return confirm('Delete this student? This cannot be undone.');
+    }
+  </script>
+</body>
+</html>

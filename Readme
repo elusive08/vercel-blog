@@ -1,0 +1,32 @@
+#We will be looking at a simple beautiful project that teaches:
+1. Routing
+2. Saving from data
+3. Fetching from mongodb
+4. Using css with EJS
+
+#What the project does? a user can add a new student (name, age, course, photo url)
+#Homepage shos a gallery of all students, netly styled
+#CSS is used for layout and presentation
+
+#Step 1
+Initialize the backend project using npm init -y
+
+#Step 2
+install the packages we will be using
+express - web servers, handle routes (pages)
+ejs - templating engine (dynamic html)
+mongoose - connects Nodejs to Mongodb
+dotenv - Loads .env variables
+nodemon - Automatically restarts server during coding
+
+#Step 3
+outline our folder structure for the project, note we will be working with models for mongoose, public for css and views for the ejs file
+
+#Step 4
+Defining our .env variables; that is mongo_uri and port
+
+#Step 5
+Defining the schema data we will be working with
+
+#step 6
+getting the server running and database connection established in our entry file, app.js

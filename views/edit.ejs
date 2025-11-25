@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Edit Student</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+   <link rel="stylesheet" href="/styles.css">
+</head>
+<center>
+<body>
+  <h1>Edit: <%= student.name %></h1>
+
+  <form action="/edit/<%= student._id %>" method="POST" class="card">
+    <div>
+      <label for="name">Name</label><br />
+      <input id="name" name="name" value="<%= student.name %>" required />
+    </div>
+
+    <div>
+      <label for="age">Age</label><br />
+      <input id="age" name="age" type="number" min="0" value="<%= student.age %>" />
+    </div>
+
+    <div>
+      <label for="course">Course</label><br />
+      <input id="course" name="course" value="<%= student.course %>" />
+    </div>
+
+    <div>
+      <label for="photo">Photo URL</label><br />
+      <input id="photo" name="photo" value="<%= student.photo %>" />
+    </div>
+
+    <div style="margin-top:10px;">
+      <button type="submit" class="btn2e">Save</button>
+      <a href="/" class="btn2">Cancel</a>
+    </div>
+  </form>
+</body>
+</center>
+</html>
