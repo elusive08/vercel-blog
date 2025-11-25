@@ -1,10 +1,11 @@
 {
   "name": "week5_studentprofilegallery",
   "version": "1.0.0",
-  "description": "1. Routing\r 2. Saving from data\r 3. Fetching from mongodb\r 4. Using css with EJS",
-  "main": "app.js",
+  "description": "1. Routing 2. Saving form data 3. Fetching from mongodb 4. Using css with EJS",
+  "main": "server.js",
   "scripts": {
-    "dev": "nodemon app.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
@@ -14,10 +15,12 @@
     "dotenv": "^17.2.3",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
-    "mongoose": "^9.0.0",
+    "mongoose": "^9.0.0"
+  },
+  "devDependencies": {
     "nodemon": "^3.1.11"
-  }
-},
-"engines": {
+  },
+  "engines": {
     "node": "18.x"
   }
+}
